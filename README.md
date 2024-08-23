@@ -87,3 +87,30 @@ Taskipy, framework de criação de comandos - https://github.com/taskipy/taskipy
 ````
 poetry add --group dev taskipy
 ````
+
+Sqlalchemy, ORM banco de dados - https://www.sqlalchemy.org/
+````
+poetry add sqlalchemy
+````
+
+Pydantic, configurações de banco de dados - https://docs.pydantic.dev/latest/
+````
+poetry add pydantic-settings
+````
+
+Alembic, migration de banco de dados - https://alembic.sqlalchemy.org/en/latest/
+````
+poetry add alembic
+````
+ - Iniciando o local das migrações(só precisa rodar uma única vez):
+````
+alembic init migrations
+````
+ - Gerar os comandos para criar uma migração
+````
+alembic revision --autogenerate -m "create table"
+````
+ - Gerar uma migração depois que atualizar o comando acima para atualizar o códigos das tabelas.
+````
+alembic upgrade head
+````
