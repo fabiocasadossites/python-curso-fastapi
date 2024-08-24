@@ -112,3 +112,18 @@ alembic revision --autogenerate -m "create table"
 ````
 alembic upgrade head
 ````
+
+Pwdlib, Criptador de senhas - https://frankie567.github.io/pwdlib/
+````
+poetry add "pwdlib[argon2]"
+````
+
+Para autenticar precisa nas tempendencias do FastAPI dessa biblioteca para poder utilizar o OAuth2PasswordRequestForm
+````
+poetry add python-multipart
+````
+
+JWT, Criação de tokens - https://pyjwt.readthedocs.io/en/stable/ e https://jwt.io/
+````
+poetry add pyjwt
+````
