@@ -19,8 +19,6 @@ Grupo no Telegram do curso: https://t.me/fastapicomdunossauro
 - python = "3.12.*"
 - fastapi = "^0.112.1"
 
-- Criação de variáveis e commits em inglês
-
 ### Criando ambiente virtual
 
 Dentro da pasta do projeto execute no mesmo local que está o arquivo pyproject.toml.
