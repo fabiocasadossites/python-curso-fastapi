@@ -127,3 +127,13 @@ JWT, Criação de tokens - https://pyjwt.readthedocs.io/en/stable/ e https://jwt
 ````
 poetry add pyjwt
 ````
+
+Factory-boy, Fabrica de modeles  - https://factoryboy.readthedocs.io/en/stable/
+````
+poetry add --group dev factory_boy
+````
+
+Freezegun, Para o tempo para fazer testes de tempo  - https://github.com/spulec/freezegun
+````
+poetry add --group dev freezegun
+````

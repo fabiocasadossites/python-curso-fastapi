@@ -6,8 +6,9 @@ from sqlalchemy.pool import StaticPool
 
 from python_fast_zero.app import app
 from python_fast_zero.database import get_session
-from python_fast_zero.models import User, table_registry
+from python_fast_zero.models import table_registry
 from python_fast_zero.security import get_password_hash
+from tests.factories import UserFactory
 
 
 @pytest.fixture
@@ -39,11 +40,23 @@ def session():
 
 @pytest.fixture
 def user(session):
-    user = User(
-        username='Teste',
-        email='teste@test.com',
-        password=get_password_hash('testtest'),
-    )
+    password = 'testtest'
+    user = UserFactory(password=get_password_hash(password))
+
+    session.add(user)
+    session.commit()
+    session.refresh(user)
+
+    user.clean_password = 'testtest'
+
+    return user
+
+
+@pytest.fixture
+def other_user(session):
+    password = 'testtest'
+    user = UserFactory(password=get_password_hash(password))
+
     session.add(user)
     session.commit()
     session.refresh(user)
