@@ -137,3 +137,8 @@ Freezegun, Para o tempo para fazer testes de tempo  - https://github.com/spulec/
 ````
 poetry add --group dev freezegun
 ````
+
+Psycopg, Driver, para usar com o banco de dados postgres - https://www.psycopg.org/
+````
+poetry add "psycopg[binary]"
+````
