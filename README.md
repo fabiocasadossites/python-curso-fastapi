@@ -142,3 +142,8 @@ Psycopg, Driver, para usar com o banco de dados postgres - https://www.psycopg.o
 ````
 poetry add "psycopg[binary]"
 ````
+
+Testcontainers, Criar containes para teste - https://testcontainers-python.readthedocs.io/en/latest/
+````
+poetry add --group dev testcontainers 
+````
