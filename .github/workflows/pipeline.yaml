@@ -26,5 +26,8 @@ jobs:
       - name: Instalar dependências
         run: poetry install
 
+      - name: Formatando códigos
+        run: poetry run task format 
+
       - name: Executar testes
         run: poetry run task test 
