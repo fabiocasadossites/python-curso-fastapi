@@ -148,3 +148,18 @@ Testcontainers, Criar containes para teste - https://testcontainers-python.readt
 poetry add --group dev testcontainers 
 poetry add --group dev httpx 
 ````
+
+Instalando act para rodar o CI na máquina local
+https://nektosact.com/introduction.html
+
+### Helps
+
+Derubar as portas caso estajam ocupadas:
+````
+sudo lsof -t -i tcp:8000 | xargs kill -9
+````
+
+Caso der erro no .env delete e instale novamente
+````
+poetry env remove --all
+````

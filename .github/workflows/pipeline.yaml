@@ -15,19 +15,16 @@ jobs:
       - name: Copia os arquivos do repositório
         uses: actions/checkout@v3
 
-      - name: Instalar o python
-        uses: actions/setup-python@v4
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Instalar o poetry
+      - name: Instalar Poetry
         run: pipx install poetry
 
       - name: Instalar dependências
         run: poetry install
 
-      - name: Formatando códigos
-        run: poetry run task format 
-
       - name: Executar testes
-        run: poetry run task test 
+        run: poetry run task test
