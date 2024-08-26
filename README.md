@@ -146,4 +146,5 @@ poetry add "psycopg[binary]"
 Testcontainers, Criar containes para teste - https://testcontainers-python.readthedocs.io/en/latest/
 ````
 poetry add --group dev testcontainers 
+poetry add --group dev httpx 
 ````
