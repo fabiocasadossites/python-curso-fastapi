@@ -1,5 +1,4 @@
 #!/bin/sh
-pip install "fastapi[standard]"
 
 # Executa as migrações do banco de dados
 poetry run alembic upgrade head
